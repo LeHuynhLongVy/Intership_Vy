@@ -5,49 +5,86 @@ current_user = User.first
 an_user = User.find_by(id:2)
 
 #################### FEEDS #####################
-# Get user name
-current_user.firstname + " " + current_user.lastname
+#Get users that current_user is following
+u=current_user.followings
+u.each do |following|
+# u=current_user.followings.first.id
 
-# Get photo's title
-Photo.first.title
+# i_id=following.id
+  i_firstname=following.firstname
+  i_lastname=following.lastname
+#  i_ava=following.avatarurl
 
-# Get photo's description
-Photo.first.description
+# u=current_user.followings.first.photos.last.title
 
-# Get photo's publication day
-Photo.first.created_at
-
-# Get photo's number of likes
-# Get album's number of likes
-
-# Get album's title
-Album.first.title
-
-# Get album's description
-Album.first.description
-
-# Get album's publication day
-Album.first.created_at
-
-
-
-
-# Get public photos in reverse chronological order
-Photo.where(sharingmode:true).order(created_at: :desc)
-
-# Get public albums in reverse chronological order
-Album.where(sharingmode:true).order(created_at: :desc)
-
-# Get users who you are following
-current_user.followings
+# Get latest public photo
+  p=following.photos.where(sharingmode:true).order(created_at: :desc).first
+# p_id=p.id
+# Get Photo Author
+  p_author=p.user.lastname + " " + p.user.firstname
+  p_title=p.title
+  p_description=p.description
+  p_time=p.created_at
+  p_ycount= p.likes.count
+  p_url= p.photourl
+# Get latest public album
+  a=following.albums.where(sharingmode:true).order(created_at: :desc).first
+# a_id=a.id
+  a_author=a.user.lastname + " " + a.user.firstname
+  a_title=a.title
+  a_description=a.description
+  a_time=a.created_at
+  a_ycount= a.likes
+  a_url= a.albumurl
+end
 
 # Get public photos post by users who you are following
 Photo.where(user_id:current_user.followings, sharingmode:true)
 
 # Get public albums post by users who you are following
 Album.where(user_id:current_user.followers, sharingmode:true)
-
+#################### MODAL #####################
+  m=User.find_by(id:2)
+  #query image
+  m=m.photos.find_by(id:3)
+  m_title=m.title
+  m_url=m.photourl
+  m_description=m.description
 #################### DISCOVERY #####################
+#Get all users
+u=User.all
+u.each do |following|
+# u=current_user.followings.first.id
+
+# i_id=following.id
+  i_firstname=following.firstname
+  i_lastname=following.lastname
+#  i_ava=following.avatarurl
+
+# u=current_user.followings.first.photos.last.title
+
+# Get latest public photo
+  p=following.photos.where(sharingmode:true).order(created_at: :desc).first
+# p_id=p.id
+# Get Photo Author
+  p_author=p.user.lastname + " " + p.user.firstname
+  p_title=p.title
+  p_description=p.description
+  p_time=p.created_at
+  p_ycount= p.likes.count
+  p_url= p.photourl
+# Get latest public album
+  a=following.albums.where(sharingmode:true).order(created_at: :desc).first
+# a_id=a.id
+  a_author=a.user.lastname + " " + a.user.firstname
+  a_title=a.title
+  a_description=a.description
+  a_time=a.created_at
+  a_ycount= a.likes
+  a_url= a.albumurl
+end
+# Check if current user has followed an user or not
+  fl_check=Follow.where(follower_id:current_user, followed_user_id:an_user).exists?
 
 # Get public photo posts from all users
 Photo.where(sharingmode:true)
@@ -55,19 +92,39 @@ Photo.where(sharingmode:true)
 # Get public album posts from all users
 Album.where(sharingmode:true)
 
-#################### PUBLIC PROFILE #####################
+#################### PROFILE #####################
+u = current_user
+u.firstname
+u.lastname
+u.avatarurl
+u.photos.count
+u.albums.count
+u.followings.count
+u.followers.count
+
+un=User.all
+un.each do |u|
+# un=current_user.followings.first.id
+# i_id=following.id
+  i_firstname=u.firstname
+  i_lastname=u.lastname
+  i_ava=u.avatarurl
+  i_photo_count=u.photos.count
+  i_album_count=u.albums.count
+
+end
 
 # Get number of public photos
-Photo.where(user_id:an_user, sharingmode:true).size
+p_count=Photo.where(user_id:an_user, sharingmode:true).count
 
 # Get number of public albums
-Album.where(user_id:an_user, sharingmode:true).size
+a_count=Album.where(user_id:an_user, sharingmode:true).count
 
 # Get the number of followings
-an_user.followings.size
+fl=current_user.followings.count
 
 # Get the number of follwers
-an_user.followers.size
+fr=current_user.followers.count
 
 # Check if current user has followed an user
 Follow.where(follower_id:current_user, followed_user_id:an_user).exists?

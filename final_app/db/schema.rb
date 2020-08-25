@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_022218) do
+ActiveRecord::Schema.define(version: 2020_08_25_072553) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_022218) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "sharingmode", default: true
     t.bigint "user_id"
+    t.string "albumurl"
     t.index ["user_id"], name: "index_albums_on_user_id"
   end
 
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_022218) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "sharingmode", default: true
     t.bigint "user_id"
+    t.string "photourl"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_022218) do
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "avatarurl"
   end
 
   add_foreign_key "albums", "users"
