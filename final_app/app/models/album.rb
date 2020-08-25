@@ -12,4 +12,5 @@ class Album < ApplicationRecord
   end
   has_and_belongs_to_many :photos
   belongs_to :user
+  has_many :likes, as: :likeable
 end
