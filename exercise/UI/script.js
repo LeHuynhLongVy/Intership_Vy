@@ -30,10 +30,10 @@ $(document).ready(function() {
     }
   })
 
-    $(".hback").on("click", function(e){
-        e.preventDefault();
-        window.history.back();
-    });
+   $(".hback").on("click", function(e){
+       e.preventDefault();
+       window.history.back();
+   });
 
   $(".love").on({
     "click": function() {
@@ -83,25 +83,25 @@ $(document).ready(function() {
       }
     }
   })
-  $(".tab").on({
-    "click": function() {
-      var others = $(".tab").not(this);
-      setAllTabOff();
-      $(this).removeClass("text-secondary");
-      $(this).addClass("text-color");
-      var tabName = $(this).attr("name") + "-tab"
-      $("div[name="+tabName+"]").removeClass("d-none")
-      // $("div[name=tabName]").addClass("d-block")
-      others.map(function() {
-        $(this).removeClass("text-color");
-        $(this).addClass("text-secondary");
-      })
-    }
-  })
-});
-function setAllTabOff() {
-  $("div[name='photos-tab']").addClass("d-none");
-  $("div[name='albums-tab']").addClass("d-none");
-  $("div[name='followings-tab']").addClass("d-none");
-  $("div[name='followers-tab']").addClass("d-none")
-}
+//  $(".tab").on({
+//    "click": function() {
+//      var others = $(".tab").not(this);
+//      setAllTabOff();
+//      $(this).removeClass("text-secondary");
+//      $(this).addClass("text-color");
+//      var tabName = $(this).attr("name") + "-tab"
+//      $("div[name="+tabName+"]").removeClass("d-none")
+//      // $("div[name=tabName]").addClass("d-block")
+//      others.map(function() {
+//        $(this).removeClass("text-color");
+//        $(this).addClass("text-secondary");
+//      })
+//    }
+//  })
+//});
+//function setAllTabOff() {
+//  $("div[name='photos-tab']").addClass("d-none");
+//  $("div[name='albums-tab']").addClass("d-none");
+//  $("div[name='followings-tab']").addClass("d-none");
+//  $("div[name='followers-tab']").addClass("d-none")
+//}

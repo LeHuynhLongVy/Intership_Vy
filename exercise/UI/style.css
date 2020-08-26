@@ -70,7 +70,7 @@ img-mng {
   border: 2px solid;
 }
 .following-button:hover {
-  text-color: linear-gradient(238.39deg, #EB6057 27.49%, #F2994A 69.05%);
+  color: black;
   background: white;
   border-color: #ff9900;
 }
@@ -89,11 +89,18 @@ img-mng {
   border: 2px solid white;
 }
 
-.profile {
+.profile-btn {
   color: rgb(60, 90, 154);
   background-color: white;
   border-color: rgb(60, 90, 154);
   border-width: 2px;
+}
+
+.profile-btn:hover {
+  color: white;
+  background-color: rgb(60, 90, 154);
+  border-width: 2px;
+  border-color: rgb(60, 90, 154);
 }
 
 .add {
@@ -110,6 +117,17 @@ img-mng {
 .delete:hover {
   color: red;
 }
+
+.square{
+  width: 180px;
+  height:180px;
+}
+
+.square-sm{
+  width: 150px;
+  height:150px;
+}
+
 /* */
 .font {
   font-family: Roboto, sans-serif;
@@ -203,6 +221,10 @@ img-mng {
 
 .thumb-container:hover .thumb-image:nth-child(1), .thumb-container:hover .thumb-image:nth-child(2)  {
         transform: rotateZ(0deg);
+}
+
+.tab {
+  font-weight: bold;
 }
 
 .images-container{
