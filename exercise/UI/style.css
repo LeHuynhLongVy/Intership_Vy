@@ -7,6 +7,37 @@
 .bg-grey {
   background-color: rgb(248, 248, 248);
 }
+.btn.chosen:hover{
+  background-color: rgb(232,232,232);
+  color: rgb(60, 90, 154);
+}
+
+.btn.change{
+  color: #000000;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+
+}
+
+.btn.navbut{
+  background-color: rgb(60, 90, 154);
+  color:white;
+}
+
+.btn.navbut:hover {
+  background-color: rgb(232,232,232);
+  color: rgb(60, 90, 154);
+}
+
+.btn.hback {
+  background-color: rgb(60, 90, 154);
+  color:white;
+}
+
+.btn.hback:hover {
+  background-color: rgb(232,232,232);
+  color: rgb(60, 90, 154);
+}
 
 .btn:focus {
   box-shadow: none;
@@ -14,7 +45,6 @@
 
 .btn:hover{
   background-color: rgb(232,232,232);
-
 }
 
 .btn a{
@@ -25,29 +55,38 @@
   background-color: rgb(60, 90, 154);
   color: white;
 }
-
+img-mng {
+  width: 200px;
+  height: 200px;
+}
 .chosen:hover {
   color: white;
 }
 /* Following button */
-.followed{
+.following-button{
   color: white;
-  background-color: rgb(231, 97, 94);
-  border-color: rgb(231, 97, 94);
-  border-width: 2px;
+  background: linear-gradient(238.39deg, #EB6057 27.49%, #F2994A 69.05%);
+  border-radius: 6px;
+  border: 2px solid;
 }
-.followed:hover {
-  color: white;
-}
-.follow {
-  color:  rgb(231, 97, 94);
-  background-color: white;
-  border-color: rgb(231, 97, 94);
-  border-width: 2px;
+.following-button:hover {
+  text-color: linear-gradient(238.39deg, #EB6057 27.49%, #F2994A 69.05%);
+  background: white;
+  border-color: #ff9900;
 }
 
-.follow:hover {
-  color: rgb(231, 97, 94);
+.follow-button {
+  background: #F8F8F8;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px 0px 0px 3px;
+  border: 2px solid #ff9900;
+}
+
+.follow-button:hover {
+  color: white;
+  background: linear-gradient(238.39deg, #EB6057 27.49%, #F2994A 69.05%);
+  border-radius: 6px;
+  border: 2px solid white;
 }
 
 .profile {
@@ -62,14 +101,14 @@
   color: white;
 }
 .add:hover {
-  color: white;
+  color: green;
 }
 .delete {
   color: white;
   background-color: rgb(240, 87, 83);
 }
 .delete:hover {
-  color: white;
+  color: red;
 }
 /* */
 .font {
@@ -102,8 +141,9 @@
   opacity: 0.5;
   background-color: black;
   position: absolute;
+  width:200px;
   top: 0px;
-  right: 0px;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -120,9 +160,9 @@
 }
 /* album css */
 .album-thumb {
-  display: inline-block;
-  border: 1px solid #eaeaea;
   position: relative;
+  height: 250px;
+  background-color: #eaeaea;
 }
 .album-thumb .thumb-container {
   position: relative;
@@ -165,14 +205,15 @@
         transform: rotateZ(0deg);
 }
 
-.images-container {
+.images-container{
   position: relative;
-  height: 180px;
-  width: 180px
+  height: 200px;
+  width: 200px
 }
+
 .images-container .thumb-image {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   position: absolute;
   top: 0;
   left: 0;

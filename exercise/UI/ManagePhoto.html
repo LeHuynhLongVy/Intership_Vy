@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+<!--    <style>-->
+<!--      div{-->
+<!--      border: 1px solid red;-->
+<!--      }-->
+
+<!--    </style>-->
   </head>
   <body>
     <div class="container-fluid font">
-      <div class="row bg justify-content-between bg-primary" style="height:40px;">
+      <div class="row justify-content-between bg-primary1" style="height:40px;">
         <div class="row col-6 align-items-center">
           <div class="col-2 pr-0 ml-5">
             <a class="navbar-brand float-right text-white font-weight-bold" href="#">Fotobook Admin</a>
@@ -21,12 +27,12 @@
         </div>
         <div class="row col-5 justify-content-end align-items-center">
           <div class="col-3 row">
-            <a class="btn rounded-circle bg-white text-color px-2" href="my_profile.html">LV</a>
-            <a class="btn text-white border-0" href="my_profile.html">LongVy</a>
+            <a class="btn rounded-circle bg-white text-primary1-color px-2" href="my_profile.html">LV</a>
+            <a class="btn navbut border-0" href="my_profile.html">LongVy</a>
           </div>
 
           <div class="col-3 row">
-            <button class="btn text-white">Logout</button>
+            <button class="btn navbut">Logout</button>
           </div>
         </div>
       </div>
@@ -34,7 +40,7 @@
       <div class="row bg-grey">
         <div class="col pt-4 align-items-center">
           <div class="row col ml-1">
-            <a class="btn text-primary font-weight-bold" href="ManagePhotos.html">Manage Photos</a>
+            <a class="btn text-primary1-color font-weight-bold" href="ManagePhotos.html">Manage Photos</a>
           </div>
           <div class="row col ml-1">
             <a class="btn text-secondary font-weight-bold" href="ManageAlbums.html">Manage Albums</a>
@@ -45,44 +51,75 @@
         </div>
 
         <div class="col-9 mt-3">
-          <div class="col bg-white pb-5 mb-5 row" style="height:1000px">
-            <div class="row my-3">
-              <div class="col-12 row my-2 mx-2">
+          <div class="col bg-white" style="height:1000px">
+            <div class="row row-cols-4 justify-content-center">
 
-                <div class="position-relative col p-0 mx-3">
-                  <img src="img/sekiro1.jpg" alt="" class="img-fluid rounded ">
-                  <div class="edit-admin font-size text-white col">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  <a href="#" class="text-white"><i class="fa fa-edit edit-admin fa-lg py-1"></i></a>
-                  </div>
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
                 </div>
 
-                <div class="position-relative col p-0 mx-3">
-                  <img src="img/sekiro1.jpg" alt="" class="img-fluid rounded ">
-                  <div class="edit-admin font-size text-white col">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  <a href="#" class="text-white"><i class="fa fa-edit edit-admin fa-lg py-1"></i></a>
-                  </div>
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
                 </div>
 
-                <div class="position-relative col p-0 mx-3">
-                  <img src="img/sekiro1.jpg" alt="" class="img-fluid rounded ">
-                  <div class="edit-admin font-size text-white col">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  <a href="#" class="text-white"><i class="fa fa-edit edit-admin fa-lg py-1"></i></a>
-                  </div>
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
                 </div>
 
-                <div class="position-relative col p-0 mx-3">
-                  <img src="img/sekiro1.jpg" alt="" class="img-fluid rounded ">
-                  <div class="edit-admin font-size text-white col">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  <a href="#" class="text-white"><i class="fa fa-edit edit-admin fa-lg py-1"></i></a>
-                  </div>
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
                 </div>
 
-              </div>
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
+                </div>
+
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
+                </div>
+
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
+                </div>
+
+                <div class=" col-3 my-3 d-flex justify-content-center">
+                    <img src="img/sekiro1.jpg" alt="" class="img-fluid" style="height:200px;width:200px;">
+                    <div class="edit-admin font-size text-white col">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        <a href="#" class="text-white"><i class="fa fa-edit fa-lg py-1" style="position:absolute; right:0;"></i></a>
+                    </div>
+                </div>
+
             </div>
+          </div>
             <div class="row footer justify-content-center align-items-end col">
               <nav>
                 <ul class="pagination">
@@ -94,12 +131,11 @@
                 </ul>
               </nav>
             </div>
+
           </div>
-        </div>
+          <div class="col">
 
-        <div class="col">
-
-        </div>
+          </div>
       </div>
     </div>
 

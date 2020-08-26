@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+<!--  <style>div{border: 1px solid red}</style>-->
+  <body>
+    <div class="container-fluid font">
+      <div class="row justify-content-between bg-primary1" style="height:40px;">
+        <div class="row col-6 align-items-center">
+          <div class="col-2 pr-0 ml-5">
+            <a class="navbar-brand float-right text-white font-weight-bold" href="#">Fotobook Admin</a>
+          </div>
+          <div class="col py-1 pr-0 h-100 ">
+            <input class="col h-100 rounded border-0" type="text" placeholder="Search Photo / Album"/>
+          </div>
+        </div>
+        <div class="row col-5 justify-content-end align-items-center">
+          <div class="col-3 row">
+            <a class="btn rounded-circle bg-white text-primary1-color px-2" href="my_profile.html">LV</a>
+            <a class="btn navbut border-0" href="my_profile.html">LongVy</a>
+          </div>
+
+          <div class="col-3 row">
+            <button class="btn navbut">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row bg-grey">
+        <div class="col pt-4 align-items-center">
+          <div class="row col ml-1">
+            <a class="btn text-secondary font-weight-bold" href="ManagePhotos.html">Manage Photos</a>
+          </div>
+          <div class="row col ml-1">
+            <a class="btn text-secondary font-weight-bold" href="ManageAlbums.html">Manage Albums</a>
+          </div>
+          <div class="row col ml-1">
+            <a class="btn text-primary1-color font-weight-bold" href="ManageUsers.html">Manage Users</a>
+          </div>
+        </div>
+
+        <div class="col-9 mt-3">
+          <div class="col bg-white pb-5 mb-5">
+              <div class="row">
+                <div class="col">
+                    <div class="font-weight-bold border-bottom py-3">
+                        Edit User Profile
+                        <button type="button" class="btn float-right hback">Back</button>
+                    </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-center mt-5">
+
+                  <div class="col-12 row justify-content-center">
+                    <div class="row col-6 ">
+                        <div class="col row mx-4">
+<!--                            <div class=" mx-5">-->
+                                <div class="col">
+                                </div>
+                                <div class="col-9 m-2">
+                                    <img src="img/doge.jpg" alt="doge" class="img-fluid img-thumbnail" style="width:150px;height:150px;"/>
+                                    <button type="button" class="btn change px-3 position-absolute" style="left:40px; bottom:10px;">CHANGE</button>
+                                </div>
+<!--                            </div>-->
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 row justify-content-center">
+                    <div class="row col-6 ">
+                        <div class="col row mx-4">
+<!--                            <div class=" mx-5">-->
+                                <div class="col">
+                                </div>
+                                <div class="col-9 p-0 m-2 ">
+                                    <h5 class="col-9 text-primary1-color ">Basic Information</h5>
+                                </div>
+<!--                            </div>-->
+                        </div>
+                    </div>
+                  </div>
+                    <div class="col-12 row justify-content-center">
+                        <div class="col-6 row justify-content-center">
+                        <form class=" col justify-content-center" action="#" method="post">
+                            <div class="row form-group mx-5" style="font-size: 16px;">
+                                <label for="fname" class="col font-weight-bold d-flex justify-content-end mt-3">First Name</label>
+                                <input type="text" name="fname"  id="fname" placeholder="First Name" class="col-9 border rounded-lg form-control pl-3" style="height:50px" autofocus/>
+                            </div>
+
+                            <div class="row form-group mx-5" style="font-size: 16px;">
+                                <label for="lname" class="col font-weight-bold d-flex justify-content-end mt-3">Last Name</label>
+                                <input type="text" name="lname"  id="lname" placeholder="Last Name" class="col-9 border rounded-lg form-control pl-3" style="height:50px" autofocus/>
+                            </div>
+
+                            <div class="row form-group mx-5" style="font-size: 16px;">
+                                <label for="email" class="col font-weight-bold d-flex justify-content-end mt-3">Email</label>
+                                <input type="text" name="email"  id="email" placeholder="someone@example.com" class="col-9 border rounded-lg form-control pl-3" style="height:50px" autofocus/>
+                            </div>
+
+                            <div class="row form-group mx-5" style="font-size: 16px;">
+                                <label for="password" class="col font-weight-bold d-flex justify-content-end mt-3">Password</label>
+                                <input type="password" name="password"  id="password" placeholder="********" class="col-9 border rounded-lg form-control pl-3" style="height:50px" autofocus/>
+                            </div>
+
+                            <div class="row form-group mx-5" style="font-size: 16px;">
+                                <label for="active" class="col-3 font-weight-bold d-flex mt-3 justify-content-end">Active?</label>
+                                <input type="checkbox" name="active"  id="active" class="col-1 form-control pl-3 mt-3" style="height:20px " autofocus/>
+                            </div>
+
+                            <div class="row form-group mx-5" style="font-size: 16px;">
+                                <div class="col-3">
+
+                                </div>
+                                <button type="button" class=" btn add px-3">Save</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+          <div class="col">
+
+          </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
