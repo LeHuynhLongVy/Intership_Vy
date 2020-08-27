@@ -119,8 +119,8 @@ img-mng {
 }
 
 .square{
-  width: 180px;
-  height:180px;
+  width: 200px;
+  height:200px;
 }
 
 .square-sm{
@@ -148,13 +148,7 @@ img-mng {
 .text-grey {
   color: rgb(248, 248, 248);
 }
-.edit {
-  opacity: 0.5;
-  background-color: black;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
+
 .edit-admin {
   opacity: 0.5;
   background-color: black;
@@ -170,9 +164,23 @@ img-mng {
   position: absolute;
   top: 0px;
   right: 0px;
-  opacity: 0.8;
-  z-index: 1;
+  opacity: 0.5;
+  background-color: white;
+  height: 28px;
+  width: 28px;
 }
+.edit {
+  opacity: 0.5;
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color:white;
+}
+.edit:hover{
+  color: black;
+}
+
 .add-photo {
   border: 2px dashed lightgrey;
 }
