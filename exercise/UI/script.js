@@ -104,4 +104,4 @@ $(document).ready(function() {
 //  $("div[name='albums-tab']").addClass("d-none");
 //  $("div[name='followings-tab']").addClass("d-none");
 //  $("div[name='followers-tab']").addClass("d-none")
-//}
+}
