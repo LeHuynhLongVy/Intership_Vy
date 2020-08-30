@@ -188,11 +188,17 @@ img-mng {
   border: 2px dashed lightgrey;
 }
 /* album css */
-.album-thumb {
+.album-thumb{
   position: relative;
   height: 250px;
   background-color: #eaeaea;
 }
+
+.album-thumb1{
+  position: relative;
+  height: 250px;
+}
+
 .album-thumb .thumb-container {
   position: relative;
   cursor: pointer;
@@ -200,7 +206,7 @@ img-mng {
 .thumb-container .photo-count{
   width: 80px;
   height: 80px;
-  background: rgba(43, 43, 43, 0.4);
+  background: rgba(51, 51, 51, 0.4);
   border-radius: 100%;
   position: absolute;
   top: 50%;
@@ -209,7 +215,7 @@ img-mng {
 }
 
 .thumb-container .title {
-  color: #4f4f4f;
+  color: black;
   margin: 10px;
   text-align: center;
 }
