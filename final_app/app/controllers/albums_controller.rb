@@ -9,12 +9,13 @@ def update
   @album.title = new_title["title"]
   if @album.valid?
     @album.update(title: new_title["title"])
-    flash.now[:success] = 'Album title was updated successfully.'
-    render :edit
-    # format.html {redirect_to(:action => 'edit')}
+    flash[:success] = 'Album title was updated successfully.'
+    redirect_to action: :edit
+    # render :edit
   else
-    flash.now[:error] = @album.errors.full_messages[0]
-    render :edit
+    flash[:error] = @album.errors.full_messages[0]
+    # render :edit
+    redirect_to action: :edit
     # format.html{ render :action => edit}
   end
     # redirect_to @album, notice: 'Album title was updated successfully.'
