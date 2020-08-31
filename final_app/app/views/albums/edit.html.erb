@@ -1,16 +1,6 @@
-<!-- <% if flash[:success] %>
-<h2><%= flash[:success] %></h2>
-<% end %>
-
-<% if flash[:errors] %>
-<h2><%= flash[:errors] %></h2>
-<% end %> -->
-
 <%- flash.each do |name, message| %>
 <p><i><%= "#{name}: #{message}" %></i></p>
 <% end %>
-
-<%= yield %>
 
 <%= form_for @album, :html => {:id => "Edit_form"} do |f| %>
 <%= f.text_field :title %>
