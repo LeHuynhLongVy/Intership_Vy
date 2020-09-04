@@ -257,13 +257,10 @@ img-mng {
 
 .images-container{
   position: relative;
-  height: 200px;
-  width: 200px
 }
 
 .images-container .thumb-image {
-  width: 200px;
-  height: 200px;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -284,11 +281,6 @@ img-mng {
 }
 
 .img1 {
-  left: 4.29%;
-  right: 49.57%;
-  top: 7.84%;
-  bottom: 7.84%;
-
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
@@ -296,11 +288,6 @@ img-mng {
 }
 
 .img2 {
-  left: 5.96%;
-  right: 47.91%;
-  top: 5.01%;
-  bottom: 10.68%;
-
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
@@ -309,11 +296,6 @@ img-mng {
 }
 
 .img3 {
-  left: 8.65%;
-  right: 45.21%;
-  top: 1.16%;
-  bottom: 14.52%;
-
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
