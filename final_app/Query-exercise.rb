@@ -19,6 +19,11 @@ u.each do |following|
 
 # Get latest public photo
   p=following.photos.where(sharingmode:true).order(created_at: :desc).first
+  ##############################################################################################################################
+  # User.first.followings.map { |user| user.photos.all.where(sharingmode:true).order(created_at: :desc)  }.flatten!.each do |i|#
+  #   puts i.title                                                                                                             #
+  # end                                                                                                                        #
+  ##############################################################################################################################
 # p_id=p.id
 # Get Photo Author
   p_author=p.user.lastname + " " + p.user.firstname

@@ -7,8 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require('jquery')
-
+require("jquery")
+require("packs/script")
 
 // = require jqueryValidation/dist/jquery.validate
 // = require jqueryValidation/dist/additional-methods

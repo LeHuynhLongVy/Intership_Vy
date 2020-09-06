@@ -4,4 +4,6 @@ class Photo < ApplicationRecord
   belongs_to :user
   has_and_belongs_to_many :albums
   has_many :likes, as: :likeable
+  
+  mount_uploader :image, ImageUploader
 end

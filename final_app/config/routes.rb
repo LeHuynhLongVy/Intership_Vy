@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users
   end
 
-  root to: "home#guestfeed"
+  root "static_pages#home"
   get 'signup', to: 'home#signup'
   get 'login', to: 'home#login'
   get 'feed/photo', to: 'home#feed_photo'
@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   get 'discover/photo', to: 'home#discover_photo'
   get 'discover/album', to: 'home#discover_album'
   get 'newest', to: 'home#newest'
+  devise_for :users
+  get "signin" => "devise/sessions#new"
+  post "signin" => "devise/sessions#create"
+  delete "signout" => "devise/sessions#destroy"
 end

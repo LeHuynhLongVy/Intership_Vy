@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_072553) do
+ActiveRecord::Schema.define(version: 2020_09_04_074800) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_072553) do
     t.boolean "sharingmode", default: true
     t.bigint "user_id"
     t.string "photourl"
+    t.string "image"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
