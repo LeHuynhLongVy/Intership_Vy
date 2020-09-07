@@ -11,24 +11,27 @@
          <input class="col rounded border-0 my-1 py-1" type="text" placeholder="Search Photo / Album" />
        </div>
 
+       <% if user_signed_in? %>
         <div class="col-lg-3 col-sm-6 col-12 d-flex justify-content-lg-end justify-content-sm-center justify-content-center">
-            <a class="btn btn-circle bg-white text-primary1-color " href="MyProfilePhotos.html">LV</a>
-            <a class="btn navbut border-0 " href="MyProfilePhotos.html">LongVy</a>
+            <a class="btn btn-circle bg-white text-primary1-color " href="MyProfilePhotos.html"><strong><%= current_user.firstname[0] + current_user.lastname[0] %></strong></a>
+            <a class="btn navbut border-0 " href="MyProfilePhotos.html"><strong><%= current_user.firstname + current_user.lastname %></strong></a>
         </div>
 
        <div class="col-lg-1 col-sm-6 col-12 d-flex justify-content-center">
-         <button class="btn navbut">Logout</button>
+         <!-- <button class="btn navbut">Logout</button> -->
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link btn navbut'  %>
        </div>
+       <% end %>
      </div>
 
 
       <div class="row bg-grey">
-        <div class="col-xl-2 col-sm-12 pt-4 align-items-center">
-          <div class="col-12 ">
+        <div class="col-xl-2 col-sm-12 pt-4 align-items-center ">
+          <div class="col-xl-12 col-sm-6 justify-content-sm-center">
             <!-- <a class="btn text-secondary" href="FeedPhotos.html">Feeds</a> -->
             <%= link_to "Feeds", feed_album_path, :class => "btn text-primary1-color"%>
           </div>
-          <div class="col-12 ">
+          <div class="col-xl-12 col-sm-6 justify-content-sm-center">
             <!-- <a class="btn text-primary1-color" href="DiscoveryAlbums.html">Discover</a> -->
             <%= link_to "Discover", discover_photo_path, :class => "btn text-secondary"%>
           </div>

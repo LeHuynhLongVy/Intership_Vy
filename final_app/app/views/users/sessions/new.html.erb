@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag "style" %>
 <%= javascript_pack_tag "script"%>
+
 <div class="container-fluid font justify-content-center">
   <div class="row bg-primary1">
     <div class="col-lg-1 col-sm-2 d-flex justify-content-center">
@@ -47,7 +48,8 @@
         </div>
       </form> -->
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:id => "new_form", class: "mt-5 col-12"})do |f| %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:id => "login_form", :class => "mt-5 col-12"})do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
       <div class="form-group" style="font-size: 16px;">
         <div class="field">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", class:"border rounded-top form-control" %>
@@ -63,6 +65,7 @@
         </div>
 
       <% end %>
+
 
       <!-- <#%= render "users/shared/links" %> -->
 
@@ -81,3 +84,6 @@
         </div>
   </div>
 </div>
+<script type="text/javascript">
+  <%= render "validate.js" %>
+</script>
